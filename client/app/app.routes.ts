@@ -6,10 +6,10 @@ import { StartComponent } from './start.component';
 import { ChildAComponent } from './childa.component';
 
 export const approutes: RouterConfig = [
-  {path: '', component: StartComponent, terminal:true},
+  {path: '', component: StartComponent, pathMatch:'full'},
   {path: 'listA', component: ListAComponent,
      children: [
-      { path: '', component: StartComponent, terminal:true},
+      { path: '', component: StartComponent, pathMatch:'full'},
       { path: ':id', component: ChildAComponent }
     ]},
   {path: 'listB', component: ListBComponent},
